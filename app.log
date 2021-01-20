@@ -1,0 +1,28 @@
+2021-01-20 23:25:03.526  INFO 19472 --- [restartedMain] c.j.s.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on DESKTOP-1QDT12Q with PID 19472 (G:\BLOG\Web\springbootdemo\target\classes started by jacky in G:\BLOG\Web\springbootdemo)
+2021-01-20 23:25:03.532  INFO 19472 --- [restartedMain] c.j.s.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-20 23:25:03.631  INFO 19472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-20 23:25:03.631  INFO 19472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-20 23:25:05.129  WARN 19472 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jacky.springbootdemo]' package. Please check your configuration.
+2021-01-20 23:25:05.582  INFO 19472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-20 23:25:05.592  INFO 19472 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-20 23:25:05.592  INFO 19472 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-20 23:25:05.717  INFO 19472 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-20 23:25:05.717  INFO 19472 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2082 ms
+2021-01-20 23:25:05.959  WARN 19472 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2021-01-20 23:25:05.960  INFO 19472 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-20 23:25:06.277  INFO 19472 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : Checkpoint start
+2021-01-20 23:25:06.277  INFO 19472 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : checkpointClose start
+2021-01-20 23:25:06.334  INFO 19472 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : checkpointClose synched
+2021-01-20 23:25:06.366  INFO 19472 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : checkpointClose script done
+2021-01-20 23:25:06.446  INFO 19472 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : checkpointClose end
+2021-01-20 23:25:06.447  INFO 19472 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : Checkpoint end - txts: 1
+2021-01-20 23:25:06.483  INFO 19472 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2021-01-20 23:25:06.487  INFO 19472 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-20 23:25:06.672  INFO 19472 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-20 23:25:07.163  INFO 19472 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-20 23:25:07.172  INFO 19472 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-20 23:25:07.236  INFO 19472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-20 23:25:07.257  INFO 19472 --- [restartedMain] c.j.s.SpringbootdemoApplication          : Started SpringbootdemoApplication in 4.718 seconds (JVM running for 8.456)
+2021-01-20 23:25:10.110  INFO 19472 --- [RMI TCP Connection(1)-169.254.204.40] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-20 23:25:10.110  INFO 19472 --- [RMI TCP Connection(1)-169.254.204.40] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-20 23:25:10.112  INFO 19472 --- [RMI TCP Connection(1)-169.254.204.40] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
