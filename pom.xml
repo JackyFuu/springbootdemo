@@ -18,6 +18,7 @@
     <properties>
         <java.version>1.8</java.version>
         <pebble.version>3.1.2</pebble.version>
+        <openapi.version>1.4.0</openapi.version>
     </properties>
 
     <dependencies>
@@ -38,6 +39,13 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.4</version>
+        </dependency>
+<!--        Open API是一个标准，它的主要作用是描述REST API，既可以作为文档给开发者阅读，又可以让机器根据这个文档自动生成客户端代码等。-->
+<!--        然后呢？没有然后了，直接启动应用，打开浏览器输入http://localhost:8080/swagger-ui.html：-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${openapi.version}</version>
         </dependency>
 <!--        Spring Boot提供了一个开发者工具，可以监控classpath路径上的文件。只要源码或配置文件发生修改，Spring Boot应用可以自动重启。在开发阶段，这个功能比较有用。-->
         <dependency>

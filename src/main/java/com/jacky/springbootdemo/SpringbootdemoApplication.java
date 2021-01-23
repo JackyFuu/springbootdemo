@@ -1,15 +1,9 @@
 package com.jacky.springbootdemo;
 
-import com.jacky.springbootdemo.config.MasterDataSourceConfiguration;
-import com.jacky.springbootdemo.config.SlaveDataSourceConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -55,9 +49,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 
 //// 启动自动配置，但排除指定的自动配置:
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-
-@Import({ MasterDataSourceConfiguration.class, SlaveDataSourceConfiguration.class})
+//@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication
+//@Import({ MasterDataSourceConfiguration.class, SlaveDataSourceConfiguration.class})
 public class SpringbootdemoApplication {
 
     public static void main(String[] args) {

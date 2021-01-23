@@ -485,3 +485,103 @@ Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile
 2021-01-21 23:36:22.575  INFO 17756 --- [RMI TCP Connection(3)-169.254.204.40] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-01-21 23:36:22.576  INFO 17756 --- [RMI TCP Connection(3)-169.254.204.40] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-01-21 23:36:22.578  INFO 17756 --- [RMI TCP Connection(3)-169.254.204.40] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-01-23 11:39:10.589  INFO 18612 --- [restartedMain] c.j.s.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on DESKTOP-1QDT12Q with PID 18612 (G:\BLOG\Web\springbootdemo\target\classes started by jacky in G:\BLOG\Web\springbootdemo)
+2021-01-23 11:39:10.595  INFO 18612 --- [restartedMain] c.j.s.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-23 11:39:11.672  WARN 18612 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 73:13]
+2021-01-23 11:39:11.672  WARN 18612 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 65:13]
+2021-01-23 11:39:11.677  INFO 18612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-23 11:39:11.678  INFO 18612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-23 11:39:15.377  INFO 18612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-23 11:39:15.386  INFO 18612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-23 11:39:15.387  INFO 18612 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-23 11:39:15.552  INFO 18612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-23 11:39:15.553  INFO 18612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3873 ms
+2021-01-23 11:39:15.574 ERROR 18612 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authFilterRegistrationBean': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'jdbcTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.jdbc.core.JdbcTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-01-23 11:39:15.604  INFO 18612 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-01-23 11:39:15.617  WARN 18612 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-01-23 11:39:15.635  INFO 18612 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-23 11:39:15.679 ERROR 18612 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jdbcTemplate in com.jacky.springbootdemo.service.UserService required a bean of type 'org.springframework.jdbc.core.JdbcTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.jdbc.core.JdbcTemplate' in your configuration.
+
+2021-01-23 11:40:29.341  INFO 15388 --- [restartedMain] c.j.s.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on DESKTOP-1QDT12Q with PID 15388 (G:\BLOG\Web\springbootdemo\target\classes started by jacky in G:\BLOG\Web\springbootdemo)
+2021-01-23 11:40:29.348  INFO 15388 --- [restartedMain] c.j.s.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-23 11:40:29.544  WARN 15388 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 73:13]
+2021-01-23 11:40:29.545  WARN 15388 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 65:13]
+2021-01-23 11:40:29.547  INFO 15388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-23 11:40:29.548  INFO 15388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-23 11:40:31.550  INFO 15388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-23 11:40:31.559  INFO 15388 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-23 11:40:31.559  INFO 15388 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-23 11:40:31.706  INFO 15388 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-23 11:40:31.707  INFO 15388 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2157 ms
+2021-01-23 11:40:31.729 ERROR 15388 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authFilterRegistrationBean': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'jdbcTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.jdbc.core.JdbcTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-01-23 11:40:31.762  INFO 15388 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-01-23 11:40:31.770  WARN 15388 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-01-23 11:40:31.796  INFO 15388 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-23 11:40:31.818 ERROR 15388 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jdbcTemplate in com.jacky.springbootdemo.service.UserService required a bean of type 'org.springframework.jdbc.core.JdbcTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.jdbc.core.JdbcTemplate' in your configuration.
+
+2021-01-23 11:41:40.087  INFO 19588 --- [restartedMain] c.j.s.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on DESKTOP-1QDT12Q with PID 19588 (G:\BLOG\Web\springbootdemo\target\classes started by jacky in G:\BLOG\Web\springbootdemo)
+2021-01-23 11:41:40.094  INFO 19588 --- [restartedMain] c.j.s.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-23 11:41:40.188  WARN 19588 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 73:13]
+2021-01-23 11:41:40.188  WARN 19588 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 65:13]
+2021-01-23 11:41:40.191  INFO 19588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-23 11:41:40.192  INFO 19588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-23 11:41:41.754  WARN 19588 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jacky.springbootdemo]' package. Please check your configuration.
+2021-01-23 11:41:42.342  INFO 19588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-23 11:41:42.354  INFO 19588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-23 11:41:42.355  INFO 19588 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-23 11:41:42.505  INFO 19588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-23 11:41:42.506  INFO 19588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2305 ms
+2021-01-23 11:41:42.826  WARN 19588 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2021-01-23 11:41:42.827  INFO 19588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-23 11:41:43.180  INFO 19588 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : checkpointClose start
+2021-01-23 11:41:43.181  INFO 19588 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : checkpointClose synched
+2021-01-23 11:41:43.239  INFO 19588 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : checkpointClose script done
+2021-01-23 11:41:43.345  INFO 19588 --- [restartedMain] hsqldb.db.HSQLDB7720663959.ENGINE        : checkpointClose end
+2021-01-23 11:41:43.352  INFO 19588 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2021-01-23 11:41:43.356  INFO 19588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-23 11:41:43.420  INFO 19588 --- [restartedMain] c.j.s.service.impl.LocalStorageService   : Intializing local storage with root dir: /var/static
+2021-01-23 11:41:43.639  INFO 19588 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-23 11:41:44.972  INFO 19588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-23 11:41:44.979  INFO 19588 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-23 11:41:45.038  INFO 19588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-23 11:41:45.056  INFO 19588 --- [restartedMain] c.j.s.SpringbootdemoApplication          : Started SpringbootdemoApplication in 6.035 seconds (JVM running for 9.864)
+2021-01-23 11:41:45.228  INFO 19588 --- [RMI TCP Connection(1)-169.254.204.40] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-23 11:41:45.229  INFO 19588 --- [RMI TCP Connection(1)-169.254.204.40] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-23 11:41:45.231  INFO 19588 --- [RMI TCP Connection(1)-169.254.204.40] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-01-23 11:42:03.522  INFO 19588 --- [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 207 ms
