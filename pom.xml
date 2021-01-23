@@ -21,6 +21,7 @@
     </properties>
 
     <dependencies>
+<!--        Spring Boot提供了一个Actuator，可以方便地实现监控，并可通过Web访问特定类型的监控。-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -30,10 +31,15 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.4</version>
         </dependency>
+<!--        Spring Boot提供了一个开发者工具，可以监控classpath路径上的文件。只要源码或配置文件发生修改，Spring Boot应用可以自动重启。在开发阶段，这个功能比较有用。-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -68,7 +74,7 @@
             <artifactId>hsqldb</artifactId>
         </dependency>
     </dependencies>
-
+<!--    打包应用-->
     <build>
         <plugins>
             <plugin>
@@ -84,6 +90,8 @@
                 </configuration>
             </plugin>
         </plugins>
+<!--        打包后的文件名-->
+        <finalName>SpringBoot-Demo</finalName>
     </build>
 
 </project>

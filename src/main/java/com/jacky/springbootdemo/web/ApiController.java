@@ -1,0 +1,54 @@
+package com.jacky.springbootdemo.web;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.jacky.springbootdemo.entity.User;
+import com.jacky.springbootdemo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api")
+public class ApiController {
+
+	@Autowired
+	UserService userService;
+
+	@GetMapping("/users")
+	public List<User> users() {
+		return userService.getUsers();
+	}
+
+	@GetMapping("/users/{id}")
+	public User user(@PathVariable("id") long id) {
+		return userService.getUserById(id);
+	}
+
+	@PostMapping("/signin")
+	public Map<String, Object> signin(@RequestBody SignInRequest signinRequest) {
+		try {
+			User user = userService.signin(signinRequest.email, signinRequest.password);
+			Map<String, Object> model = new HashMap<>();
+			model.put("user", user);
+			return model;
+
+		} catch (Exception e) {
+			Map<String, Object> model = new HashMap<>();
+			model.put("error", "SIGNIN_FAILED");
+			model.put("message", e.getMessage());
+			return model;
+		}
+	}
+
+	public static class SignInRequest {
+		public String email;
+		public String password;
+	}
+}

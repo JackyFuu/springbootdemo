@@ -2,6 +2,7 @@ package com.jacky.springbootdemo.service;
 
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.util.List;
 
 import com.jacky.springbootdemo.entity.User;
 import org.slf4j.Logger;
@@ -28,11 +29,11 @@ public class UserService {
 	RowMapper<User> userRowMapper = new BeanPropertyRowMapper<>(User.class);
 
 	public User getUserById(long id) {
-		return jdbcTemplate.queryForObject("SELECT * FROM users WHERE id = ?", new Object[] { id }, userRowMapper);
+		return jdbcTemplate.queryForObject("SELECT * FROM users WHERE id = ?", new Object[]{id}, userRowMapper);
 	}
 
 	public User getUserByEmail(String email) {
-		return jdbcTemplate.queryForObject("SELECT * FROM users WHERE email = ?", new Object[] { email },
+		return jdbcTemplate.queryForObject("SELECT * FROM users WHERE email = ?", new Object[]{email},
 				userRowMapper);
 	}
 
@@ -72,5 +73,9 @@ public class UserService {
 		if (1 != jdbcTemplate.update("UPDATE users SET name = ? WHERE id=?", user.getName(), user.getId())) {
 			throw new RuntimeException("User not found by id");
 		}
+	}
+
+	public List<User> getUsers() {
+		return jdbcTemplate.query("SELECT * FROM users", userRowMapper);
 	}
 }

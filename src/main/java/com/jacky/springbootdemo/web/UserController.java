@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import com.jacky.springbootdemo.config.RoutingWithSlave;
 import com.jacky.springbootdemo.entity.User;
 import com.jacky.springbootdemo.service.UserService;
 import org.slf4j.Logger;
@@ -91,11 +92,14 @@ public class UserController {
 	}
 
 	@GetMapping("/profile")
+	@RoutingWithSlave //使用从数据库数据
 	public ModelAndView profile(HttpSession session) {
 		User user = (User) session.getAttribute(KEY_USER);
 		if (user == null) {
 			return new ModelAndView("redirect:/signin");
 		}
+		// 测试是否走slave数据库:
+		user = userService.getUserByEmail(user.getEmail());
 		Map<String, User> model = new HashMap<>();
 		model.put("user", user);
 		return new ModelAndView("profile.html", model);
